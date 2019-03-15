@@ -1,0 +1,25 @@
+header {
+  background: url(../images/checklist.jpg) center / cover;
+  height: 30vh;
+  justify-content: center;
+  text-align: center;
+}
+
+h1 {
+  color: hsla(239,100%,50%);
+  font-weight: bold;
+}
+
+
+ body {
+  padding-bottom: 5rem;
+  font-family: "robto","Arial",sans-serif;
+}
+
+
+ @media screen and (max-width: 768px) {
+   header.mdl-layout__header {
+     display: flex;
+   }
+ }
+/*push text */
