@@ -31,6 +31,11 @@ function onReady(){
    newToDoText.value = '';
  });
 }
+function deleteToDo() {
+        toDos = toDos.filter(item => {
+          return item != toDo;
+        });
+      }
 window.onload = function() {
   onReady();
 };

@@ -1,18 +1,44 @@
 <!DOCTYPE html>
 <html>
- <head>
+
+<head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>To-Do App</title>
- </head>
- <body>
-   <h1>To-Do App</h1>
-   <form id="addToDoForm">
-    <label for="newToDoText">New To-Do:</label>
-    <input type="text" id="newToDoText">
-    <button type="submit">Add To-Do!</button>
-  </form>
-   <ul id="toDoList">
-   </ul>
-   <script src="app.js"></script>
- </body>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Material Design Lite -->
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" />
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+  <header class="mdl-layout__header mdl-layout__header--transparent">
+    <h1>To-Do App</h1>
+  </header>
+  <main class=" mdl-layout__content mdl-grid">
+    <div class="toDoFormArea demo-card-wide mdl-card mdl-shadow--2dp">
+
+      <form id="addToDoForm">
+        <p>
+          <label for="newToDoText">New To-Do:</label> </p>
+        <input type="text" id="newToDoText">
+
+        <button class="submit mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Add To-Do!</button>
+      </form>
+
+
+      <ul id="toDoList">
+      </ul>
+
+      <form id="deleteToDo">
+        <button class=" delete mdl-button mdl-js-button mdl-button--raised mdl-button--colored">Delete</button>
+      </form>
+
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+
 </html>
