@@ -16,8 +16,8 @@ function onReady(){
    //create a new input
    let checkbox = document.createElement('input');
 
-   let deleteButton = document.getElementById('button')
-
+   let deleteButton = document.createElement('button')
+   deleteButton.classList.add('mdl-button', 'mdl-js-button', 'mdl-button--raised');
    //set the input's type to checkbox
    checkbox.type = "checkbox";
 
