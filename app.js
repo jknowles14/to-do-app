@@ -1,4 +1,5 @@
 function onReady() {
+   let id = 0;
    const toDos = []; //Our state is going to be an array of to-dos.
    const addToDoForm = document.getElementById('addToDoForm');
  function createNewToDo() { //  update our array of to-dos
@@ -7,7 +8,8 @@ function onReady() {
 
    toDos.push({ //add the new to-do to the toDos array using the push() method.
          title: newToDoText.value,// assign the value of the text input, newToDoText to the title key
-         complete: false
+         complete: false,
+         id: id++,
    });
    newToDoText.value = ''; //clear the text input for the user.
 
@@ -25,11 +27,23 @@ function onReady() {
 
     toDoList.appendChild(newLi); // the DOM
       newLi.appendChild(checkbox);
+
+    });
+    delteToDos.forEach(function( ) { //Using forEach is how we'll render each to-do as a li in the ul.
+      const deleteBox = document.createElement('delete');
+    deleteBox.type = "delete";
+
+    newLi.textContent = toDo.title; //todos title duh
+
+    toDoList.appendChild(newLi); // the DOM
+      newLi.appendChild(deleteBox);
+
     });
 }
   addToDoForm.addEventListener('submit', event => { // event listener, using the submit event of the form element.
     event.preventDefault();//prevent the page from reloading.
     createNewToDo();//call the createNewToDo() function we just created.
+    deleteToDo();
   });
   renderTheUI(); //render the UI based on the current state.
 }
