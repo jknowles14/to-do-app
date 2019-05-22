@@ -1,3 +1,3 @@
 # to-do-app
 
-This project was done to practice javaScript and using DOM. 
+This is a practice project. The assignment was to make a to-do app using JavaScript, DOM and Google's MDL design system.
